@@ -71,7 +71,7 @@ const NavBar = () => {
         }
         onClick={() => setMobileNavbarVisible(false)}
       ></div>
-      {/* Large Screen */}
+      {/* Large Screen  */}
     </div>
   );
 };
