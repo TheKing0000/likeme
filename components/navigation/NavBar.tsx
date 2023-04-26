@@ -33,8 +33,8 @@ const NavBar = () => {
       <div
         className={
           showShadow
-            ? "fixed z-[98] h-14 bg-[#fffffe] dark:bg-[#16161a]  shadow-md shadow-[#3da9fc] w-full mb-5 duration-[400ms]"
-            : "fixed z-[98] h-14 bg-[#fffffe] dark:bg-[#16161a] w-full mb-5"
+            ? "fixed z-[98] h-14 bg-[#fffffe] dark:bg-[#16161a]  shadow-md shadow-[#3da9fc] w-full mb-5 duration-[200ms]"
+            : "fixed z-[98] h-14 bg-[#fffffe] dark:bg-[#16161a] w-full mb-5 duration-[200ms]"
         }
       >
         <div className="flex flex-row justify-between items-center h-full px-2">

@@ -9,7 +9,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#fffffe] dark:bg-[#16161a] text-[#5f6c7b] dark:text-[#94a1b2] tracking-wide duration-300 ease-linear;
+    @apply bg-[#fffffe] dark:bg-[#16161a] text-[#5f6c7b] dark:text-[#94a1b2] tracking-wide  duration-[150ms] ease-linear;
   }
 
   h1,
