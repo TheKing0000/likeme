@@ -16,26 +16,12 @@ const containerVariants: Variants = {
     transition: {
       duration: 1,
       type: "spring",
-      stiffness: 120,
       // when:"beforeChildren"
       // staggerChildren:0.2
     },
   },
 };
-const draw = {
-  hidden: { pathLength: 0, opacity: 0 },
-  visible: (i: any) => {
-    const delay = 1 + i * 0.5;
-    return {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-        opacity: { delay, duration: 0.01 },
-      },
-    };
-  },
-};
+
 // const keyframesVariants: Variants = {
 //   initial: {},
 //   animate: {
@@ -117,7 +103,7 @@ export default function Home() {
             <span>Try for free</span>
           </motion.button>
         </div>
-        <div className=" w-full md:mt-[10rem]  mt-[10vh]">
+        <div className=" w-full md:mt-[10rem]  mt-[10vh] ">
           <LogoList />
         </div>
       </motion.section>

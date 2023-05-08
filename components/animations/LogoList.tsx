@@ -8,6 +8,7 @@ import {
 } from "react-icons/bs";
 import { SiNetflix } from "react-icons/si";
 import LogoListItem from "./LogoListItem";
+
 const logos = [
   {
     key: "google",
@@ -70,7 +71,7 @@ function LogoList() {
   //   size={30}
   // />;
   return (
-    <div className="flex overflow-x-auto">
+    <div className="flex overflow-x-hidden">
       {logos.map((logo, index) => {
         return (
           <LogoListItem
