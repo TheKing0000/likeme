@@ -2,6 +2,8 @@ import NavBar from "@/components/navigation/NavBar";
 
 import Typewriter from "typewriter-effect";
 import { Variants, motion, AnimatePresence } from "framer-motion";
+import LogoList from "@/components/animations/LogoList";
+import Footer from "@/components/common/Footer";
 
 const containerVariants: Variants = {
   initial: {
@@ -34,20 +36,20 @@ const draw = {
     };
   },
 };
-const keyframesVariants: Variants = {
-  initial: {},
-  animate: {
-    x: [-20, 0, 20, 0],
-    transition: { repeat: Infinity },
-  },
-};
+// const keyframesVariants: Variants = {
+//   initial: {},
+//   animate: {
+//     x: [-20, 0, 20, 0],
+//     transition: { repeat: Infinity },
+//   },
+// };
 // animate routes
 {
   /* <AnimatePresence mode='wait'>
   <motion.div exit={{ y: -1000 }}></motion.div>
 </AnimatePresence>; */
 }
-const logos = ["XXXX", "b", "C", "A", "b", "C", "A", "b", "c", "----"];
+
 export default function Home() {
   return (
     <main>
@@ -56,7 +58,7 @@ export default function Home() {
         variants={containerVariants}
         initial="initial"
         animate="animate"
-        className="min-h-[70vh] flex justify-start  items-center flex-col mt-[1rem] md:mt-[6rem]"
+        className="min-h-[100vh] flex justify-start  items-center flex-col mt-[1rem] md:mt-[3rem]"
       >
         <div className=" bg-[#16161a] dark:bg-[#16161a] shadow-lg shadow-[#3da9fc] dark:shadow-[#3da9fc] w-[300px] rounded">
           <p className="text-center font-bold text-[#FBFBFB] dark:text-[#3da9fc]  ">
@@ -97,10 +99,10 @@ export default function Home() {
         </h2>
         <div className="mt-[2rem] md:mt-[5rem]">
           <motion.button
-            initial={{ opacity: 0, y: "100vh" }}
+            initial={{ opacity: 0, x: "-100vw" }}
             animate={{
               opacity: 1,
-              y: 0,
+              x: 0,
               transition: {
                 delay: 0.8,
                 type: "spring",
@@ -115,28 +117,13 @@ export default function Home() {
             <span>Try for free</span>
           </motion.button>
         </div>
+        <div className=" w-full md:mt-[10rem]  mt-[10vh]">
+          <LogoList />
+        </div>
       </motion.section>
 
       <div className="h-screen"></div>
-      <div className="overflow-hidden">
-        <div className="">
-          <motion.div
-            className="flex w-[200vw] bg-red-300 items-center justify-between overflow-x-hidden"
-            animate={{
-              x: ["100vw", "-100vw", "100vw", "-100vw"], // Array of animation values
-              transition: {
-                duration: 10,
-                repeat: Infinity,
-                ease: "linear",
-              },
-            }}
-          >
-            {logos.map((logo, index) => (
-              <div key={logo + index.toString()}>{logo}</div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
+      <Footer />
     </main>
   );
 }
