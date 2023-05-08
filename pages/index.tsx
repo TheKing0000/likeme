@@ -64,7 +64,7 @@ export default function Home() {
             Discover, connect, and thrive with our platform&apos;s unique blend
             of
           </span>
-          <span className="text-[#3da9fc] block my-1">
+          <span className="text-[#3da9fc] block my-1 w-[80%] mx-auto ">
             <Typewriter
               options={{
                 strings: [
