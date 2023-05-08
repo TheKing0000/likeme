@@ -4,7 +4,7 @@ import {
   AiOutlineUserAdd,
   AiOutlineLike,
 } from "react-icons/ai";
-
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -62,10 +62,13 @@ const NavBar = () => {
               <div className="flex-none">
                 {/* <h1 className="text-[#3da9fc] cursor-pointer">LikeMe</h1> */}
                 <Link href="/">
-                  <AiOutlineLike
+                  {/* <AiOutlineLike
                     className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
                     size={30}
-                  />
+                  /> */}
+                  <h1 className="font-bold text-[#16161a] dark:text-[#fffffe] hover:text-[#3da9fc] dark:hover:text-[#3da9fc] transition-colors duration-500">
+                    LikeMe
+                  </h1>
                 </Link>
               </div>
               <div className="space-x-7 flex-grow flex justify-end items-center pr-5">
