@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import { Variants, motion, AnimatePresence } from "framer-motion";
 import LogoList from "@/components/animations/LogoList";
 import Footer from "@/components/common/Footer";
+import { useEffect } from "react";
 
 const containerVariants: Variants = {
   initial: {
@@ -37,6 +38,10 @@ const containerVariants: Variants = {
 }
 
 export default function Home() {
+  // Scroll to the top of the page at initial render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main>
       <NavBar />
@@ -109,6 +114,13 @@ export default function Home() {
       </motion.section>
 
       <div className="h-screen"></div>
+      {/* <motion.h1
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        animate={{ transition: { duration: 3 } }}
+      >
+        Hellloo
+      </motion.h1> */}
       <Footer />
     </main>
   );

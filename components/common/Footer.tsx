@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer className="w-full">
         {/* Main footer */}
-        <div className="pt-16 pb-12 text-sm   dark:bg-slate-800">
+        <div className="pt-16 pb-12 text-sm   dark:bg-[#16161a]">
           <div className="container px-6 mx-auto">
             <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
               <nav
