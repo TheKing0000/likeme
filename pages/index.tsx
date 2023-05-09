@@ -10,7 +10,7 @@ import ScrollYProgressBar from "@/components/animations/ScrollYProgressBar";
 const containerVariants: Variants = {
   initial: {
     opacity: 0,
-    x: "100vw",
+    x: "100%",
   },
   animate: {
     opacity: 1,
@@ -91,7 +91,7 @@ export default function Home() {
           business landscape.
         </h2>
         <div className="mt-[2rem] md:mt-[5rem]">
-          <motion.button
+          {/* <motion.button
             initial={{ opacity: 0, x: "-100vw" }}
             animate={{
               opacity: 1,
@@ -109,7 +109,10 @@ export default function Home() {
             className="inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#3da9fc] px-6 text-base font-medium tracking-wide text-white shadow-md shadow-[#3da9fc] transition duration-300 hover:bg-[#3da9fc] hover:shadow-lg hover:shadow-[#3da9fc] focus:bg-[#3da9fc] focus:shadow-md focus:shadow-[#3da9fc] focus-visible:outline-none "
           >
             <span>Try for free</span>
-          </motion.button>
+          </motion.button> */}
+          <button className="inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#3da9fc] px-6 text-base font-medium tracking-wide text-white shadow-md shadow-[#3da9fc] transition duration-300 hover:bg-[#3da9fc] hover:shadow-lg hover:shadow-[#3da9fc] focus:bg-[#3da9fc] focus:shadow-md focus:shadow-[#3da9fc] focus-visible:outline-none ">
+            <span>Try for free</span>
+          </button>
         </div>
       </motion.section>
       <div className=" w-full md:mt-[10rem]  mt-[5rem] ">
