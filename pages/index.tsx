@@ -40,9 +40,9 @@ const containerVariants: Variants = {
 
 export default function Home() {
   // Scroll to the top of the page at initial render
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <main>
       <NavBar />
@@ -66,7 +66,7 @@ export default function Home() {
             Discover, connect, and thrive with our platform&apos;s unique blend
             of
           </span>
-          <span className="text-[#3da9fc] block my-5 w-[95%] mx-auto px-1 ">
+          {/* <span className="text-[#3da9fc] block my-5 w-[95%] mx-auto px-1 ">
             <Typewriter
               options={{
                 strings: [
@@ -78,7 +78,7 @@ export default function Home() {
                 loop: true,
               }}
             />
-          </span>
+          </span> */}
           <span className="block"> driving startup success.</span>
         </h1>
         <h2 className="md:w-[60%] w-[90%] text-center">
@@ -115,9 +115,9 @@ export default function Home() {
           </button>
         </div>
       </motion.section>
-      <div className=" w-full md:mt-[10rem]  mt-[5rem] ">
+      {/* <div className=" w-full md:mt-[10rem]  mt-[5rem] ">
         <LogoList />
-      </div>
+      </div> */}
 
       <div className="h-screen"></div>
       {/* <motion.h1
