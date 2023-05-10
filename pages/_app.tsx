@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.75 }}
           variants={{
             initial: {
               opacity: 0,
@@ -26,6 +26,9 @@ export default function App({ Component, pageProps }: AppProps) {
             },
             exit: {
               clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+              transition: {
+                duration: 1,
+              },
             },
           }}
         >
