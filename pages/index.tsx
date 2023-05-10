@@ -106,7 +106,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <div className="h-screen"></div>
+      <div className=""></div>
       {/* <motion.h1
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -114,23 +114,24 @@ export default function Home() {
       >
         Hellloo
       </motion.h1> */}
-      <div className="container mx-auto px-5 md:px-0">
+      <div className="container mx-auto px-5 md:px-0 my-7">
         <Testimonialscontainer />
       </div>
 
-      <div className="">
-        {/* animate on scroll */}
-        <motion.h1
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ amount: "some" }}
-          transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
-          className="text-center font-bold bg-red-400 h-52"
-        >
-          Hello
-        </motion.h1>
-      </div>
       <Footer />
     </main>
   );
 }
+//ANIMATE ON SCROLL
+// <div className="">
+//   {/* animate on scroll */}
+//   <motion.h1
+//     initial={{ opacity: 0 }}
+//     whileInView={{ opacity: 1 }}
+//     viewport={{ amount: "some" }}
+//     transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
+//     className="text-center font-bold bg-red-400 h-52"
+//   >
+//     Hello
+//   </motion.h1>
+// </div>
