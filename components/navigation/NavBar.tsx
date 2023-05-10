@@ -50,7 +50,10 @@ const NavBar = () => {
           >
             {/* Mobil */}
             <div className="flex flex-row justify-between items-center h-full px-2 md:hidden">
-              <h1 className="text-[#3da9fc] cursor-pointer">LikeMe</h1>
+              <Link href={"/proba"}>
+                <h1 className="text-[#3da9fc] cursor-pointer">LikeMe</h1>
+              </Link>
+
               <GiHamburgerMenu
                 onClick={() => setMobileNavbarVisible(!mobileNavbarVisible)}
                 className="text-[#3da9fc] dark:text-[#3da9fc] cursor-pointer"
@@ -61,7 +64,7 @@ const NavBar = () => {
             <div className=" flex-row items-center h-full px-8 hidden md:flex">
               <div className="flex-none">
                 {/* <h1 className="text-[#3da9fc] cursor-pointer">LikeMe</h1> */}
-                <Link href="/">
+                <Link href="/proba">
                   {/* <AiOutlineLike
                     className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
                     size={30}
