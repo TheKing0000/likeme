@@ -15,7 +15,7 @@ export default function Testimonials({
   return (
     <>
       {/*      <!-- Component: Simple basic centered lg sized testimonial --> */}
-      <div className="flex h-full">
+      <div className="flex h-full cursor-move">
         <motion.div
           initial={{ opacity: 0, x: -200 }}
           whileInView={{
@@ -30,10 +30,10 @@ export default function Testimonials({
           drag
           dragSnapToOrigin
         >
-          <div className=" text-center border dark:border-[#FBFBFB] border-[#16161a]  rounded-xl shadow-lg dark:shadow-[#FBFBFB] shadow-[#16161a]  hover:rounded-3xl transition-all duration-300 hover:bg-[#3da9fc] hover:bg-opacity-90 hover:scale-105 group active:scale-95">
+          <div className=" text-center border dark:border-[#FBFBFB] border-[#16161a]  rounded-xl shadow-lg dark:shadow-[#FBFBFB] shadow-[#16161a]  hover:rounded-3xl transition-all duration-300 hover:bg-[#3da9fc] hover:bg-opacity-90 hover:scale-105 group active:scale-95 overflow-hidden">
             <div className=" p-3 ">
               <figure className=" ">
-                <blockquote className="p-6 text-2xl leading-relaxed text-[#16161a] dark:text-[#FBFBFB]">
+                <blockquote className="p-6  text-lg md:text-2xl leading-relaxed text-[#16161a] dark:text-[#FBFBFB]">
                   <p>{text}</p>
                 </blockquote>
                 <div className="flex flex-grow w-full justify-center items-center">
@@ -45,11 +45,11 @@ export default function Testimonials({
                 </div>
                 <figcaption className="flex items-center gap-4 p-6 pt-2 text-sm text-[#16161a] dark:text-[#FBFBFB]">
                   <div className="mx-auto flex flex-col justify-center gap-1">
-                    <span className="text-[#16161a] dark:text-[#FBFBFB]  text-sm  group  transition duration-300">
+                    <span className="text-[#16161a] dark:text-[#FBFBFB]  text-sm    transition duration-300">
                       {name}
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#ffd803]"></span>
                     </span>
-                    <span className="text-[#16161a] dark:text-[#FBFBFB]  text-sm  group  transition duration-300">
+                    <span className="text-[#16161a] dark:text-[#FBFBFB]  text-sm    transition duration-300">
                       {company}
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#ffd803]"></span>
                     </span>
