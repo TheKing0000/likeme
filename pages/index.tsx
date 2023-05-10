@@ -6,6 +6,7 @@ import LogoList from "@/components/animations/LogoList";
 import Footer from "@/components/common/Footer";
 import { useEffect } from "react";
 import ScrollYProgressBar from "@/components/animations/ScrollYProgressBar";
+import Testimonialscontainer from "@/components/testimonials/Testimonialscontainer";
 
 const containerVariants: Variants = {
   initial: {
@@ -54,7 +55,7 @@ export default function Home() {
               </p>
             </div>
 
-            <h1 className="uppercase mt-[2rem] md:mt-[6rem] mb-[2rem] text-[#16161a] dark:text-[#FBFBFB] text-center text-2xl ">
+            <h1 className="uppercase mt-[2rem] md:mt-[6rem] mb-[2rem] text-[#16161a] dark:text-[#FBFBFB] text-center text-lg md:text-2xl ">
               <span className="block">
                 Discover, connect, and thrive with our platform&apos;s unique
                 blend of
@@ -74,7 +75,7 @@ export default function Home() {
               </span>
               <span className="block"> driving startup success.</span>
             </h1>
-            <h2 className="md:w-[60%] w-[90%] text-center">
+            <h2 className="md:w-[60%] w-[90%] text-center text-base">
               Fuel your startup&apos;s success with our innovative platform,
               designed to empower entrepreneurs through the seamless integration
               of community insights, data-driven decision-making, and targeted
@@ -113,6 +114,10 @@ export default function Home() {
       >
         Hellloo
       </motion.h1> */}
+      <div className="container mx-auto px-5 md:px-0">
+        <Testimonialscontainer />
+      </div>
+
       <div className="">
         {/* animate on scroll */}
         <motion.h1
