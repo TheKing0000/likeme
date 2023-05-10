@@ -45,8 +45,8 @@ export default function Home() {
           initial="initial"
           animate="animate"
         >
-          <div className="min-h-[80vh] flex justify-start items-center flex-col mt-[1rem] md:mt-[3rem] px-1">
-            <div className=" bg-[#16161a] dark:bg-[#16161a] shadow-lg shadow-[#3da9fc] dark:shadow-[#3da9fc] w-[300px] rounded">
+          <div className="min-h-[100vh] flex justify-start items-center flex-col mt-[1rem] md:mt-[3rem] px-1 w-full">
+            <div className=" bg-[#16161a] dark:bg-[#16161a] shadow-lg shadow-[#3da9fc] dark:shadow-[#3da9fc] w-[300px] rounded mb-[1rem] md:mb-0">
               <p className="text-center font-bold text-[#FBFBFB] dark:text-[#3da9fc]  ">
                 <span className="text-sm">
                   Unleash Your Startup&apos;s Potential
@@ -59,7 +59,7 @@ export default function Home() {
                 Discover, connect, and thrive with our platform&apos;s unique
                 blend of
               </span>
-              <span className="text-[#3da9fc] block my-5 w-[95%] mx-auto px-1 ">
+              <span className="text-[#3da9fc]  h-[5rem] w-[95%] mx-auto px-1 flex justify-center items-center leading-8">
                 <Typewriter
                   options={{
                     strings: [
@@ -85,24 +85,25 @@ export default function Home() {
             </h2>
             <div className="mt-[2rem] md:mt-[5rem]">
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
+                initial={{ opacity: 0, x: 120 }}
                 animate={{
                   opacity: 1,
                   x: 0,
                 }}
-                transition={{ delay: 1, type: "spring", stiffness: 120 }}
+                transition={{ delay: 1, type: "spring", stiffness: 130 }}
               >
                 <button className="inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#3da9fc] px-6 text-base font-medium tracking-wide text-white shadow-md shadow-[#3da9fc] transition duration-300 hover:bg-[#3da9fc] hover:shadow-lg hover:shadow-[#3da9fc] focus:bg-[#3da9fc] focus:shadow-md focus:shadow-[#3da9fc] focus-visible:outline-none hover:scale-110 active:scale-95">
                   <span>Try for free</span>
                 </button>
               </motion.div>
             </div>
+
+            <div className=" w-full md:mt-[10rem]  mt-[5rem] ">
+              <LogoList />
+            </div>
           </div>
         </motion.div>
       </section>
-      {/* <div className=" w-full md:mt-[10rem]  mt-[5rem] ">
-        <LogoList />
-      </div> */}
 
       <div className="h-screen"></div>
       {/* <motion.h1

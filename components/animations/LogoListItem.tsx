@@ -9,17 +9,11 @@ type ILogoListItem = {
 function LogoListItem({ companyIcon, index, numberoflogos }: ILogoListItem) {
   const logoVariants: Variants = {
     start: {
-      x: `calc( ${numberoflogos * 15}rem)`, // start from the right side of the screen
+      x: `calc( ${numberoflogos * 20}rem)`, // start from the right side of the screen
     },
     end: {
       x: `calc( -${numberoflogos * 20}rem)`, // move to the left side of the screen
-      transition: {
-        duration: 20,
-        repeat: Infinity,
-        repeatType: "loop",
-      },
     },
-    hover: {},
   };
 
   return (
@@ -28,9 +22,9 @@ function LogoListItem({ companyIcon, index, numberoflogos }: ILogoListItem) {
       variants={logoVariants}
       initial="start"
       animate="end"
-      whileHover="hover"
+      transition={{ duration: 15, repeat: Infinity, ease: "easeIn" }}
     >
-      <div className="flex justify-center items-center h-full pointer-events-none">
+      <div className="flex justify-center items-center h-full  hover:scale-125 transition duration-500 cursor-default">
         {companyIcon}
       </div>
     </motion.div>

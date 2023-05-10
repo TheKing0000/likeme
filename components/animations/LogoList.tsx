@@ -66,10 +66,6 @@ const logos = [
   },
 ];
 function LogoList() {
-  // <AiOutlineLike
-  //   className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
-  //   size={30}
-  // />;
   return (
     <div className="flex overflow-x-hidden">
       {logos.map((logo, index) => {
