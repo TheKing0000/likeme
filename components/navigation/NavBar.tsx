@@ -137,10 +137,10 @@ const NavBar = () => {
               animate="animate"
               variants={mobileNavContainerVariant}
               className={
-                "z-[100] overflow-y-auto fixed top-0 left-0  w-[85%] sm:w-[90%]  h-screen bg-[#fffffe] dark:bg-[#0f0e17] p-4"
+                "z-[100] overflow-auto fixed top-0 left-0  w-[85%] sm:w-[90%]   bg-[#fffffe] dark:bg-[#0f0e17]  h-screen"
               }
             >
-              <div className="flex flex-col items-center h-full w-full">
+              <div className="flex flex-col items-center h-screen w-full p-4">
                 <div className="flex justify-between items-center w-full flex-shrink-0">
                   <AiOutlineClose
                     onClick={() => setMobileNavbarVisible(false)}
@@ -150,8 +150,8 @@ const NavBar = () => {
 
                   <SetTheme />
                 </div>
-                <div className="flex-grow justify-center items-center flex w-full">
-                  <div className="   overflow-x-hidden w-full space-y-4 text-center flex flex-col justify-evenly h-[75%] ">
+                <div className="flex-grow justify-center items-center flex w-full overflow-y-auto">
+                  <div className="   overflow-x-hidden w-full space-y-11 text-center flex flex-col justify-evenly  ">
                     {navLinks.map((navLink) => {
                       return (
                         <motion.h1
