@@ -64,21 +64,19 @@ const NavBar = () => {
           <div
             className={
               showShadow
-                ? "fixed top-0 left-0 right-0 z-[98] h-14 bg-[#fffffe] dark:bg-[#16161a]  shadow-md shadow-[#3da9fc]  mb-5 transition duration-[200ms]"
-                : "fixed top-0 left-0 right-0 z-[98] h-14 bg-[#fffffe] dark:bg-[#16161a]  mb-5 transition duration-[200ms]"
+                ? "fixed top-0 left-0 right-0 z-[98] h-14  bg-ff   shadow-md shadow-[#3da9fc]  mb-5 transition duration-[200ms]"
+                : "fixed top-0 left-0 right-0 z-[98] h-14  bg-ff   mb-5 transition duration-[200ms]"
             }
           >
             {/* Mobil */}
             <div className="flex flex-row justify-between items-center h-full px-2 md:hidden">
               <Link href={"/proba"}>
-                <h1 className="text-[#16161a] dark:text-[#fffffe]  cursor-pointer">
-                  LikeMe
-                </h1>
+                <h1 className="text-ff cursor-pointer">LikeMe</h1>
               </Link>
 
               <GiHamburgerMenu
                 onClick={() => setMobileNavbarVisible(!mobileNavbarVisible)}
-                className="text-[#16161a] dark:text-[#fffffe] cursor-pointer"
+                className=" text-ff  cursor-pointer"
                 size={25}
               />
             </div>
@@ -88,10 +86,10 @@ const NavBar = () => {
                 {/* <h1 className="text-[#3da9fc] cursor-pointer">LikeMe</h1> */}
                 <Link href="/proba">
                   {/* <AiOutlineLike
-                    className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
+                    className=" text-ff  cursor-pointer "
                     size={30}
                   /> */}
-                  <h1 className="font-bold text-[#16161a] dark:text-[#fffffe] hover:text-[#3da9fc] dark:hover:text-[#3da9fc] transition-colors duration-500">
+                  <h1 className="font-bold  text-ff  hover:text-[#3da9fc] dark:hover:text-[#3da9fc] transition-colors duration-500">
                     LikeMe
                   </h1>
                 </Link>
@@ -157,7 +155,7 @@ const NavBar = () => {
                         <motion.h1
                           variants={mobileNavListItemVariant}
                           key={navLink}
-                          className="text-[#16161a] dark:text-[#FBFBFB] uppercase text-lg inline-block"
+                          className="text-ff hover:text-[#3da9fc] uppercase text-lg inline-block"
                         >
                           {navLink}
                         </motion.h1>

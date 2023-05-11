@@ -12,57 +12,29 @@ import LogoListItem from "./LogoListItem";
 const logos = [
   {
     key: "google",
-    companyIcon: (
-      <BsGoogle
-        className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
-        size={33}
-      />
-    ),
+    companyIcon: <BsGoogle className=" text-ff  cursor-pointer " size={33} />,
   },
   {
     key: "microsoft",
     companyIcon: (
-      <BsMicrosoft
-        className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
-        size={33}
-      />
+      <BsMicrosoft className=" text-ff  cursor-pointer " size={33} />
     ),
   },
   {
     key: "facebook",
-    companyIcon: (
-      <BsFacebook
-        className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
-        size={33}
-      />
-    ),
+    companyIcon: <BsFacebook className=" text-ff  cursor-pointer " size={33} />,
   },
   {
     key: "apple",
-    companyIcon: (
-      <BsApple
-        className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
-        size={33}
-      />
-    ),
+    companyIcon: <BsApple className=" text-ff  cursor-pointer " size={33} />,
   },
   {
     key: "netflix",
-    companyIcon: (
-      <SiNetflix
-        className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
-        size={33}
-      />
-    ),
+    companyIcon: <SiNetflix className=" text-ff  cursor-pointer " size={33} />,
   },
   {
     key: "twitter",
-    companyIcon: (
-      <BsTwitter
-        className="text-[#16161a] dark:text-[#fffffe] cursor-pointer "
-        size={33}
-      />
-    ),
+    companyIcon: <BsTwitter className=" text-ff  cursor-pointer " size={33} />,
   },
 ];
 function LogoList() {
