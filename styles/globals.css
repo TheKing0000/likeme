@@ -9,7 +9,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#fffffe] dark:bg-[#16161a] text-[#5f6c7b] dark:text-[#94a1b2] tracking-wide  duration-[150ms] ease-linear select-none;
+    @apply bg-ff  text-[#5f6c7b] dark:text-[#94a1b2] tracking-wide  duration-[150ms] ease-linear select-none;
   }
 
   h1,
@@ -29,4 +29,15 @@ html {
   li {
     @apply cursor-pointer;
   } */
+}
+@layer components {
+  .text-ff {
+    @apply text-[#16161a] dark:text-[#FBFBFB];
+  }
+  .bg-ff {
+    @apply bg-[#fffffe] dark:bg-[#16161a];
+  }
+  .sectiondivider {
+    @apply my-[4rem] md:my-[7rem];
+  }
 }

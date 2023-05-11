@@ -15,36 +15,41 @@ export default function Testimonials({
   return (
     <>
       {/*      <!-- Component: Simple basic centered lg sized testimonial --> */}
-      <div className="flex h-full cursor-move">
+      <div className="h-full flex cursor-pointer">
         <motion.div
-          initial={{ opacity: 0, x: -200 }}
+          initial={{ opacity: 0, y: 220 }}
           whileInView={{
             opacity: 1,
-            x: 0,
-            transition: { duration: 1.5, delay: (index + 1) / 10 },
+            y: 0,
+
+            transition: {
+              duration: 1.25,
+              delay: (index + 1) / 10,
+            },
           }}
-          viewport={{ amount: "some" }}
+          // viewport={{}}
+          viewport={{ amount: "some", once: true }}
           transition={{
             delay: 0.5,
           }}
-          drag
-          dragSnapToOrigin
+          // drag
+          // dragSnapToOrigin
         >
-          <div className=" text-center border dark:border-[#FBFBFB] border-[#16161a]  rounded-xl shadow-lg dark:shadow-[#FBFBFB] shadow-[#16161a]  hover:rounded-3xl transition-all duration-300 hover:bg-[#3da9fc] hover:bg-opacity-90 hover:scale-105 group active:scale-95 overflow-hidden">
-            <div className=" p-3 ">
-              <figure className=" ">
-                <blockquote className="p-6  text-lg md:text-2xl leading-relaxed text-[#16161a] dark:text-[#FBFBFB]">
+          <div className=" text-center border dark:border-[#5f6c7b] border-[#5f6c7b]  rounded-xl shadow-md dark:shadow-[#5f6c7b] shadow-[#5f6c7b]  hover:rounded-3xl transition-all duration-300   hover:scale-105 group active:scale-95 h-full">
+            <div className="   h-full flex">
+              <div className=" flex flex-col items-center h-full">
+                <div className="p-6 mt-4 text-lg md:text-xl leading-relaxed text-[#16161a] dark:text-[#FBFBFB]">
                   <p>{text}</p>
-                </blockquote>
-                <div className="flex flex-grow w-full justify-center items-center">
+                </div>
+                <div className="flex-grow w-full flex-row flex items-end justify-center">
                   <AiFillStar className="text-[#ffd803]" size={30} />
                   <AiFillStar className="text-[#ffd803]" size={30} />
                   <AiFillStar className="text-[#ffd803]" size={30} />
                   <AiFillStar className="text-[#ffd803]" size={30} />
                   <AiFillStar className="text-[#ffd803]" size={30} />
                 </div>
-                <figcaption className="flex items-center gap-4 p-6 pt-2 text-sm text-[#16161a] dark:text-[#FBFBFB]">
-                  <div className="mx-auto flex flex-col justify-center gap-1">
+                <div className="inline-block p-6 pt-2 text-sm text-[#16161a] dark:text-[#FBFBFB]">
+                  <div className="iztems-center flex flex-col justify-center gap-1">
                     <span className="text-[#16161a] dark:text-[#FBFBFB]  text-sm    transition duration-300">
                       {name}
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#ffd803]"></span>
@@ -54,8 +59,8 @@ export default function Testimonials({
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#ffd803]"></span>
                     </span>
                   </div>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>

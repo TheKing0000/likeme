@@ -40,6 +40,7 @@ export default function Home() {
     <main>
       <NavBar />
       <ScrollYProgressBar />
+      {/* HERO SECTION */}
       <section>
         <motion.div
           variants={containerVariants}
@@ -105,20 +106,18 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
-      <div className=""></div>
-      {/* <motion.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        animate={{ transition: { duration: 3 } }}
-      >
-        Hellloo
-      </motion.h1> */}
-      <div className="container mx-auto px-5 md:px-0 my-7">
-        <Testimonialscontainer />
-      </div>
-
-      <Footer />
+      <div className="sectiondivider"></div>
+      {/* TESTIMONIALS */}
+      <section>
+        <div className="container mx-auto px-5 md:px-0 ">
+          <Testimonialscontainer />
+        </div>
+      </section>
+      <div className="sectiondivider"></div>
+      {/* FOOTER */}
+      <section>
+        <Footer />
+      </section>
     </main>
   );
 }
