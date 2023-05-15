@@ -5,22 +5,22 @@ const testimonials = [
   {
     text: "This platform provided invaluable feedback for my startup. The community engagement and reviews helped me understand market demand and refine my product. A must-have resource!",
     name: "Tim Cook",
-    company: "CEO of Apple",
+    company: "CEO of Applee",
   },
   {
     text: "Finding talent was effortless with this platform. I received high-quality applicants willing to work for equity. Highly recommended!",
     name: "Satya Nadella",
-    company: " CEO of Microsoft",
+    company: " CEO of Microsoftt",
   },
   {
     text: "Running targeted questionnaires made easy. Connect with our target audience, gather insights, and make data-driven decisions. A fantastic tool for market research!",
     name: "Elon Musk",
-    company: " CEO of Tesla",
+    company: " CEO of Teslaa",
   },
   {
     text: "Participating in surveys through this platform was a win-win experience. Share opinions, earn cash rewards. Make my voice heard and earn extra income!",
     name: "Christian Klein",
-    company: " CEO of SAP",
+    company: " CEO of SAPP",
   },
 ];
 const Testimonialscontainer = () => {

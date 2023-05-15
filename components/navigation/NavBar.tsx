@@ -1,4 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
+
 import {
   AiOutlineClose,
   AiOutlineUserAdd,
@@ -8,9 +9,16 @@ import { Variants, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-import NavLink from "./NavLink";
+import NavLinkDesktop from "./NavLinkDesktop";
 import SetTheme from "./SetTheme";
-const navLinks = ["Home", "Validation", "Jobs", "Questionnaires"];
+import NavLinkMobile from "./NavLinkMobile";
+
+const navLinks = [
+  { linkText: "Home", hrefText: "/" },
+  { linkText: "Validation", hrefText: "/services/validation" },
+  { linkText: "Jobs", hrefText: "/services/jobs" },
+  { linkText: "Questionnaires", hrefText: "/services/questionnaires" },
+];
 const mobileNavContainerVariant: Variants = {
   initial: { opacity: 0, x: "-100vw" },
   animate: {
@@ -23,14 +31,7 @@ const mobileNavContainerVariant: Variants = {
     },
   },
 };
-const mobileNavListItemVariant: Variants = {
-  initial: { opacity: 0, x: -30 },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.75, type: "spring", stiffness: 100 },
-  },
-};
+
 const NavBar = () => {
   const [mobileNavbarVisible, setMobileNavbarVisible] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
@@ -57,6 +58,9 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleShadow);
     };
   }, []);
+  const handleNavbarClose = () => {
+    setMobileNavbarVisible(false);
+  };
   return (
     <header>
       <nav>
@@ -70,7 +74,7 @@ const NavBar = () => {
           >
             {/* Mobil */}
             <div className="flex flex-row justify-between items-center h-full px-2 md:hidden">
-              <Link href={"/proba"}>
+              <Link href={"/"}>
                 <h1 className="text-ff cursor-pointer">LikeMe</h1>
               </Link>
 
@@ -84,7 +88,7 @@ const NavBar = () => {
             <div className=" flex-row items-center h-full px-8 hidden md:flex">
               <div className="flex-none">
                 {/* <h1 className="text-[#3da9fc] cursor-pointer">LikeMe</h1> */}
-                <Link href="/proba">
+                <Link href="/">
                   {/* <AiOutlineLike
                     className=" text-ff  cursor-pointer "
                     size={30}
@@ -95,34 +99,38 @@ const NavBar = () => {
                 </Link>
               </div>
               <div className="space-x-7 flex-grow flex justify-end items-center pr-5">
-                {navLinks.map((currentNavEL) => {
+                {navLinks.map(({ linkText, hrefText }) => {
                   return (
-                    <NavLink
-                      key={currentNavEL}
-                      hrefText="/"
-                      linkText={currentNavEL}
+                    <NavLinkDesktop
+                      key={linkText}
+                      hrefText={hrefText}
+                      linkText={linkText}
                     />
                   );
                 })}
               </div>
               <div className="flex-none">
                 <div className="flex justify-center  items-center space-x-2">
-                  <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#16161a] dark:bg-[#FBFBFB] px-4 text-sm font-medium tracking-wide  transition duration-300 dark:hover:bg-[#FBFBFB]/70 hover:bg-[#16161a]/80 focus:bg-[#FBFBFB] focus-visible:outline-none  ">
-                    <span className="order-2 text-[#FBFBFB] dark:text-[#16161a]">
-                      Get started
-                    </span>
-                    <span className="">
-                      <AiOutlineUserAdd
-                        className="text-[#FBFBFB] dark:text-[#16161a] cursor-pointer"
-                        size={20}
-                      />
-                    </span>
-                  </button>
-                  <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FBFBFB] dark:bg-[#16161a] px-4 text-sm font-medium tracking-wide  transition duration-300 hover:bg-[#16161a]  dark:hover:bg-[#FBFBFB]    group">
-                    <span className="order-2  text-[#16161a] dark:text-[#FBFBFB] group-hover:text-[#FBFBFB] dark:group-hover:text-[#16161a]">
-                      Login
-                    </span>
-                  </button>
+                  <Link href="/signup">
+                    <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#16161a] dark:bg-[#FBFBFB] px-4 text-sm font-medium tracking-wide  transition duration-300 dark:hover:bg-[#FBFBFB]/70 hover:bg-[#16161a]/80 focus:bg-[#FBFBFB] focus-visible:outline-none  ">
+                      <span className="order-2 text-[#FBFBFB] dark:text-[#16161a]">
+                        Get started
+                      </span>
+                      <span className="">
+                        <AiOutlineUserAdd
+                          className="text-[#FBFBFB] dark:text-[#16161a] cursor-pointer"
+                          size={20}
+                        />
+                      </span>
+                    </button>
+                  </Link>
+                  <Link href="/login">
+                    <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FBFBFB] dark:bg-[#16161a] px-4 text-sm font-medium tracking-wide  transition duration-300 hover:bg-[#16161a]  dark:hover:bg-[#FBFBFB]    group">
+                      <span className="order-2  text-[#16161a] dark:text-[#FBFBFB] group-hover:text-[#FBFBFB] dark:group-hover:text-[#16161a]">
+                        Login
+                      </span>
+                    </button>
+                  </Link>
                   <SetTheme />
                 </div>
               </div>
@@ -150,37 +158,40 @@ const NavBar = () => {
                 </div>
                 <div className="flex-grow justify-center items-center flex w-full overflow-y-auto">
                   <div className="   overflow-x-hidden w-full space-y-11 text-center flex flex-col justify-evenly  ">
-                    {navLinks.map((navLink) => {
+                    {navLinks.map(({ linkText, hrefText }) => {
                       return (
-                        <motion.h1
-                          variants={mobileNavListItemVariant}
-                          key={navLink}
-                          className="text-ff hover:text-[#3da9fc] uppercase text-lg inline-block"
-                        >
-                          {navLink}
-                        </motion.h1>
+                        <NavLinkMobile
+                          handleNavbarClose={handleNavbarClose}
+                          key={linkText}
+                          hrefText={hrefText}
+                          linkText={linkText}
+                        />
                       );
                     })}
                   </div>
                 </div>
                 <div className="flex-shrink-0">
                   <div className="flex justify-center  items-center space-x-2">
-                    <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#16161a] dark:bg-[#FBFBFB] px-4   tracking-wide  transition duration-300 dark:hover:bg-[#FBFBFB]/70 hover:bg-[#16161a]/80 focus:bg-[#FBFBFB] focus-visible:outline-none  font-bold">
-                      <span className="order-2 text-[#FBFBFB] dark:text-[#16161a]">
-                        Get started
-                      </span>
-                      <span className="">
-                        <AiOutlineUserAdd
-                          className="text-[#FBFBFB] dark:text-[#16161a] cursor-pointer"
-                          size={20}
-                        />
-                      </span>
-                    </button>
-                    <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FBFBFB] dark:bg-[#16161a] px-4   tracking-wide  transition duration-300 hover:bg-[#16161a]  dark:hover:bg-[#FBFBFB] font-bold   group">
-                      <span className="order-2  text-[#16161a] dark:text-[#FBFBFB] group-hover:text-[#FBFBFB] dark:group-hover:text-[#16161a]">
-                        Login
-                      </span>
-                    </button>
+                    <Link href="/signup">
+                      <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#16161a] dark:bg-[#FBFBFB] px-4   tracking-wide  transition duration-300 dark:hover:bg-[#FBFBFB]/70 hover:bg-[#16161a]/80 focus:bg-[#FBFBFB] focus-visible:outline-none  font-bold">
+                        <span className="order-2 text-[#FBFBFB] dark:text-[#16161a]">
+                          <Link href="/signup">Get started</Link>
+                        </span>
+                        <span className="">
+                          <AiOutlineUserAdd
+                            className="text-[#FBFBFB] dark:text-[#16161a] cursor-pointer"
+                            size={20}
+                          />
+                        </span>
+                      </button>
+                    </Link>
+                    <Link href="/login">
+                      <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FBFBFB] dark:bg-[#16161a] px-4   tracking-wide  transition duration-300 hover:bg-[#16161a]  dark:hover:bg-[#FBFBFB] font-bold   group">
+                        <span className="order-2  text-[#16161a] dark:text-[#FBFBFB] group-hover:text-[#FBFBFB] dark:group-hover:text-[#16161a]">
+                          Login
+                        </span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

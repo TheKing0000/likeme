@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-interface INavLink {
+interface INavLinkDesktop {
   linkText: string;
   hrefText: string;
 }
-const NavLink = ({ linkText, hrefText = "/" }: INavLink) => {
+const NavLinkDesktop = ({ linkText, hrefText = "/" }: INavLinkDesktop) => {
   return (
     <>
       <Link href={hrefText}>
@@ -17,4 +17,4 @@ const NavLink = ({ linkText, hrefText = "/" }: INavLink) => {
   );
 };
 
-export default NavLink;
+export default NavLinkDesktop;
