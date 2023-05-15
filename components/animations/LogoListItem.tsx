@@ -22,7 +22,7 @@ function LogoListItem({ companyIcon, index, numberoflogos }: ILogoListItem) {
       variants={logoVariants}
       initial="start"
       animate="end"
-      transition={{ duration: 15, repeat: Infinity, ease: "easeIn" }}
+      transition={{ duration: 20, repeat: Infinity, ease: "easeIn" }}
     >
       <div className="flex justify-center items-center h-full  hover:scale-125 transition duration-500 cursor-default">
         {companyIcon}

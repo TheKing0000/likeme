@@ -35,7 +35,7 @@ export default function Testimonials({
           // drag
           // dragSnapToOrigin
         >
-          <div className=" text-center border dark:border-[#5f6c7b] border-[#5f6c7b]  rounded-xl shadow-md dark:shadow-[#5f6c7b] shadow-[#5f6c7b]  hover:rounded-3xl transition-all duration-300   hover:scale-105 group active:scale-95 h-full">
+          <div className=" text-center border dark:border-[#5f6c7b] border-[#5f6c7b]  rounded-xl shadow-md dark:shadow-[#5f6c7b] shadow-[#5f6c7b]  hover:rounded-3xl transition-all duration-300    md:hover:scale-105 group active:scale-95 h-full">
             <div className="   h-full flex">
               <div className=" flex flex-col items-center h-full">
                 <div className="p-6 mt-4 text-lg md:text-xl leading-relaxed text-[#16161a] dark:text-[#FBFBFB]">

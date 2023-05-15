@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default function Proba() {
+export default function SignUp() {
   return (
-    <div className="h-screen w-full bg-red-500">
+    <div className="h-screen w-full">
       <Link href={"/"}>Go back home</Link>
-      Helooooo
+      Sign up
     </div>
   );
 }

@@ -1,22 +1,20 @@
-import NavBar from "@/components/navigation/NavBar";
-
 import Typewriter from "typewriter-effect";
 import { Variants, motion } from "framer-motion";
 import LogoList from "@/components/animations/LogoList";
-import Footer from "@/components/common/Footer";
-import { useEffect } from "react";
-import ScrollYProgressBar from "@/components/animations/ScrollYProgressBar";
+
 import Testimonialscontainer from "@/components/testimonials/Testimonialscontainer";
 
 const containerVariants: Variants = {
   initial: {
+    scale: 0,
     opacity: 0,
   },
   animate: {
+    scale: 1,
     opacity: 1,
     transition: {
-      delay: 0.5,
-      type: "spring",
+      duration: 0.75,
+      delay: 0.25,
     },
   },
 };
@@ -37,9 +35,7 @@ const containerVariants: Variants = {
 
 export default function Home() {
   return (
-    <main>
-      <NavBar />
-      <ScrollYProgressBar />
+    <>
       {/* HERO SECTION */}
       <section>
         <motion.div
@@ -87,12 +83,16 @@ export default function Home() {
             </h2>
             <div className="mt-[2rem] md:mt-[5rem]">
               <motion.div
-                initial={{ opacity: 0, x: 120 }}
+                initial={{ opacity: 0, x: 130 }}
                 animate={{
                   opacity: 1,
                   x: 0,
+                  transition: {
+                    duration: 2,
+                    delay: 1.2,
+                    type: "spring",
+                  },
                 }}
-                transition={{ delay: 1, type: "spring", stiffness: 130 }}
               >
                 <button className="inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#3da9fc] px-6 text-base font-medium tracking-wide text-white shadow-md shadow-[#3da9fc] transition duration-300 hover:bg-[#3da9fc] hover:shadow-lg hover:shadow-[#3da9fc] focus:bg-[#3da9fc] focus:shadow-md focus:shadow-[#3da9fc] focus-visible:outline-none hover:scale-110 active:scale-95">
                   <span>Try for free</span>
@@ -109,16 +109,12 @@ export default function Home() {
       <div className="sectiondivider"></div>
       {/* TESTIMONIALS */}
       <section>
-        <div className="container mx-auto px-5 md:px-0 ">
+        <div className="container mx-auto px-5 md:px-0 py-5">
           <Testimonialscontainer />
         </div>
       </section>
       <div className="sectiondivider"></div>
-      {/* FOOTER */}
-      <section>
-        <Footer />
-      </section>
-    </main>
+    </>
   );
 }
 //ANIMATE ON SCROLL
