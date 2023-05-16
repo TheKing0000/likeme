@@ -1,5 +1,4 @@
-import { Variants } from "framer-motion";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 const mobileNavListItemVariant: Variants = {
   initial: { opacity: 0, x: -30 },

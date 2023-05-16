@@ -3,18 +3,22 @@ import { Variants, motion } from "framer-motion";
 import LogoList from "@/components/animations/LogoList";
 
 import Testimonialscontainer from "@/components/testimonials/Testimonialscontainer";
+import Image from "next/image";
+import CommunityValidation from "@/components/pages/index/CommunityValidation";
 
 const containerVariants: Variants = {
   initial: {
-    scale: 0,
+    x: 100,
     opacity: 0,
   },
   animate: {
-    scale: 1,
+    x: 0,
     opacity: 1,
+
     transition: {
-      duration: 0.75,
-      delay: 0.25,
+      type: "spring",
+      stiffness: 130,
+      duration: 1,
     },
   },
 };
@@ -107,12 +111,41 @@ export default function Home() {
         </motion.div>
       </section>
       <div className="sectiondivider"></div>
+      {/* FEATURES */}
+      <section>
+        <div className="container mx-auto px-3 ">
+          <div className="text-center ">
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  delay: 0.25,
+                  duration: 1,
+                },
+              }}
+              viewport={{ amount: "some", once: true }}
+              className="text-lg md:text-2xl text-ff mb-[8rem] md:mb-[10rem] shadow-lg  shadow-[#3da9fc] px-4 pb-2 inline-block md:hover:shadow-xl md:hover:shadow-[#3da9fc] transition-all duration-300"
+            >
+              Uncover the Hidden Gems of Our Platform
+            </motion.h3>
+          </div>
+
+          <div className="container mx-auto px-2">
+            {/* Community validation */}
+
+            <CommunityValidation />
+          </div>
+        </div>
+      </section>
+      <div className="sectiondivider"></div>
       {/* TESTIMONIALS */}
       <section>
         <div className="container mx-auto px-5 md:px-0 py-5">
           <Testimonialscontainer />
         </div>
       </section>
+
       <div className="sectiondivider"></div>
     </>
   );
