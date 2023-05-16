@@ -8,16 +8,11 @@ import CommunityValidation from "@/components/pages/index/CommunityValidation";
 
 const containerVariants: Variants = {
   initial: {
-    x: 100,
     opacity: 0,
   },
   animate: {
-    x: 0,
     opacity: 1,
-
     transition: {
-      type: "spring",
-      stiffness: 130,
       duration: 1,
     },
   },
