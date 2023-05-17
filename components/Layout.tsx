@@ -1,4 +1,4 @@
-import ScrollYProgressBar from "./animations/ScrollYProgressBar";
+// import ScrollYProgressBar from "./animations/ScrollYProgressBar";
 import Footer from "./common/Footer";
 import NavBar from "./navigation/NavBar";
 
@@ -9,7 +9,7 @@ export default function Layout({ children }: ILayout) {
   return (
     <>
       <NavBar />
-      <ScrollYProgressBar />
+      {/* <ScrollYProgressBar /> */}
       <main>{children}</main>
       <Footer />
     </>

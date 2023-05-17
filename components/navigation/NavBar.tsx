@@ -1,11 +1,6 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import {
-  AiOutlineClose,
-  AiOutlineUserAdd,
-  AiOutlineLike,
-} from "react-icons/ai";
-import { Variants, motion } from "framer-motion";
+import { AiOutlineClose, AiOutlineUserAdd } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -19,18 +14,6 @@ const navLinks = [
   { linkText: "Jobs", hrefText: "/services/jobs" },
   { linkText: "Questionnaires", hrefText: "/services/questionnaires" },
 ];
-const mobileNavContainerVariant: Variants = {
-  initial: { opacity: 0, x: "-100vw" },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.75,
-      staggerChildren: 0.25,
-      when: "beforeChildren",
-    },
-  },
-};
 
 const NavBar = () => {
   const [mobileNavbarVisible, setMobileNavbarVisible] = useState(false);
@@ -139,16 +122,13 @@ const NavBar = () => {
           {/* mobile Navbar */}
           {mobileNavbarVisible && (
             <div>
-              <motion.div
-                initial="initial"
-                animate="animate"
-                variants={mobileNavContainerVariant}
+              <div
                 className={
-                  "z-[100] overflow-y-auto fixed top-0 left-0  w-[85%] sm:w-[90%]   bg-[#fffffe] dark:bg-[#0f0e17]  h-screen"
+                  "z-[100] overflow-y-auto fixed top-0 left-0 bottom-0 w-[85%] sm:w-[90%]   bg-[#fffffe] dark:bg-[#0f0e17]   p-4"
                 }
               >
-                <div className="relative flex flex-col  items-center p-4 h-screen">
-                  <div className="flex justify-between items-center w-full ">
+                <div className="flex flex-col  items-center w-full  h-full overflow-auto">
+                  <div className="flex flex-row justify-between items-center w-full ">
                     <AiOutlineClose
                       onClick={() => setMobileNavbarVisible(false)}
                       className="text-[#16161a] dark:text-[#FBFBFB] cursor-pointer"
@@ -157,48 +137,45 @@ const NavBar = () => {
 
                     <SetTheme />
                   </div>
-                  <div className=" grow">
-                    <div className="justify-center h-full items-center flex w-full overflow-y-auto">
-                      <div className="   overflow-x-hidden w-full space-y-11 text-center flex flex-col justify-evenly  ">
-                        {navLinks.map(({ linkText, hrefText }) => {
-                          return (
-                            <NavLinkMobile
-                              handleNavbarClose={handleNavbarClose}
-                              key={linkText}
-                              hrefText={hrefText}
-                              linkText={linkText}
-                            />
-                          );
-                        })}
-                      </div>
+                  <div className="flex-grow overflow-y-auto flex h-full items-center justify-center my-4">
+                    <div className="flex flex-col space-y-12 ">
+                      {navLinks.map(({ linkText, hrefText }) => {
+                        return (
+                          <NavLinkMobile
+                            handleNavbarClose={handleNavbarClose}
+                            key={linkText}
+                            hrefText={hrefText}
+                            linkText={linkText}
+                          />
+                        );
+                      })}
                     </div>
                   </div>
-                  <div className="">
-                    <div className="flex  justify-center  items-center space-x-2">
-                      <Link href="/signup">
-                        <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#16161a] dark:bg-[#FBFBFB] px-4   tracking-wide  transition duration-300 dark:hover:bg-[#FBFBFB]/70 hover:bg-[#16161a]/80 focus:bg-[#FBFBFB] focus-visible:outline-none  font-bold">
-                          <span className="order-2 text-[#FBFBFB] dark:text-[#16161a]">
-                            <Link href="/signup">Get started</Link>
-                          </span>
-                          <span className="">
-                            <AiOutlineUserAdd
-                              className="text-[#FBFBFB] dark:text-[#16161a] cursor-pointer"
-                              size={20}
-                            />
-                          </span>
-                        </button>
-                      </Link>
-                      <Link href="/login">
-                        <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FBFBFB] dark:bg-[#16161a] px-4   tracking-wide  transition duration-300 hover:bg-[#16161a]  dark:hover:bg-[#FBFBFB] font-bold   group">
-                          <span className="order-2  text-[#16161a] dark:text-[#FBFBFB] group-hover:text-[#FBFBFB] dark:group-hover:text-[#16161a]">
-                            Login
-                          </span>
-                        </button>
-                      </Link>
-                    </div>
+
+                  <div className="flex flex-row justify-evenly  items-center w-full mb-2">
+                    <Link href="/signup">
+                      <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#16161a] dark:bg-[#FBFBFB] px-4   tracking-wide  transition duration-300 dark:hover:bg-[#FBFBFB]/70 hover:bg-[#16161a]/80 focus:bg-[#FBFBFB] focus-visible:outline-none  font-bold">
+                        <span className="order-2 text-[#FBFBFB] dark:text-[#16161a]">
+                          Get started
+                        </span>
+                        <span className="">
+                          <AiOutlineUserAdd
+                            className="text-[#FBFBFB] dark:text-[#16161a] cursor-pointer"
+                            size={20}
+                          />
+                        </span>
+                      </button>
+                    </Link>
+                    <Link href="/login">
+                      <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FBFBFB] dark:bg-[#16161a] px-4   tracking-wide  transition duration-300 hover:bg-[#16161a]  dark:hover:bg-[#FBFBFB] font-bold   group">
+                        <span className="order-2  text-[#16161a] dark:text-[#FBFBFB] group-hover:text-[#FBFBFB] dark:group-hover:text-[#16161a]">
+                          Login
+                        </span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           )}
 

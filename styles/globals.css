@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --scroll-behavior: smooth;
-  scroll-behavior: smooth;
-}
-
 @layer base {
+  html {
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+  }
   body {
     @apply bg-ff  text-[#5f6c7b] dark:text-[#94a1b2] tracking-wide  duration-[150ms] ease-linear select-none;
   }
