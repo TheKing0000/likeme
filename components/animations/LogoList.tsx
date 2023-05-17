@@ -12,43 +12,46 @@ import LogoListItem from "./LogoListItem";
 const logos = [
   {
     key: "google",
-    companyIcon: <BsGoogle className=" text-ff  cursor-pointer " size={33} />,
+    companyIcon: (
+      <BsGoogle className=" text-ff  cursor-pointer group-hover:scale-110 transition-all duration-300 hover:text-[#3da9fc] text-[2rem] md:text-[2.5rem] hover:-rotate-12" />
+    ),
   },
   {
     key: "microsoft",
     companyIcon: (
-      <BsMicrosoft className=" text-ff  cursor-pointer " size={33} />
+      <BsMicrosoft className=" text-ff  cursor-pointer group-hover:scale-110 transition-all duration-300 hover:text-[#3da9fc] text-[2rem] md:text-[2.5rem] hover:rotate-12" />
     ),
   },
   {
     key: "facebook",
-    companyIcon: <BsFacebook className=" text-ff  cursor-pointer " size={33} />,
+    companyIcon: (
+      <BsFacebook className=" text-ff  cursor-pointer group-hover:scale-110 transition-all duration-300 hover:text-[#3da9fc] text-[2rem] md:text-[2.5rem] hover:-rotate-12" />
+    ),
   },
   {
     key: "apple",
-    companyIcon: <BsApple className=" text-ff  cursor-pointer " size={33} />,
+    companyIcon: (
+      <BsApple className=" text-ff  cursor-pointer group-hover:scale-110 transition-all duration-300 hover:text-[#3da9fc] text-[2rem] md:text-[2.5rem] hover:rotate-12" />
+    ),
   },
   {
     key: "netflix",
-    companyIcon: <SiNetflix className=" text-ff  cursor-pointer " size={33} />,
+    companyIcon: (
+      <SiNetflix className=" text-ff  cursor-pointer group-hover:scale-110 transition-all duration-300 hover:text-[#3da9fc] text-[2rem] md:text-[2.5rem] hover:-rotate-12" />
+    ),
   },
   {
     key: "twitter",
-    companyIcon: <BsTwitter className=" text-ff  cursor-pointer " size={33} />,
+    companyIcon: (
+      <BsTwitter className=" text-ff  cursor-pointer group-hover:scale-110 transition-all duration-300 hover:text-[#3da9fc] text-[2rem] md:text-[2.5rem] hover:rotate-12" />
+    ),
   },
 ];
 function LogoList() {
   return (
-    <div className="flex overflow-x-hidden">
-      {logos.map((logo, index) => {
-        return (
-          <LogoListItem
-            key={logo.key}
-            companyIcon={logo.companyIcon}
-            index={index}
-            numberoflogos={logos.length}
-          />
-        );
+    <div className="grid grid-cols-3 lg:grid-cols-6 container mx-auto gap-10 md:gap-15 lg:gap-20">
+      {logos.map((logo) => {
+        return <LogoListItem key={logo.key} companyIcon={logo.companyIcon} />;
       })}
     </div>
   );

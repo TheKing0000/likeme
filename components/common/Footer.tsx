@@ -21,7 +21,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Features
@@ -29,7 +29,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Customers
@@ -37,7 +37,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Why us?
@@ -45,7 +45,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Pricing
@@ -66,7 +66,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Documentation
@@ -74,7 +74,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Training
@@ -82,7 +82,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       System status
@@ -90,7 +90,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       FAQ&apos;s
@@ -98,7 +98,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Help Center
@@ -119,7 +119,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       About us
@@ -127,7 +127,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Careers
@@ -135,7 +135,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Leadership
@@ -143,7 +143,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Blog
@@ -151,7 +151,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Events
@@ -172,7 +172,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Contact
@@ -180,7 +180,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Support
@@ -188,7 +188,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Partners
@@ -196,7 +196,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-2 leading-6">
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc] "
                     >
                       Join research
@@ -224,7 +224,7 @@ export default function Footer() {
                 <ul className="flex items-center justify-end gap-4">
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc]"
                     >
                       <svg
@@ -252,7 +252,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc]"
                     >
                       <svg
@@ -278,7 +278,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0)"
+                      href="/"
                       className="transition-colors duration-300 hover:text-[#3da9fc]"
                     >
                       <svg
