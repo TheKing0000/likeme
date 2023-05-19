@@ -1,53 +1,51 @@
-import { FaComments, FaUsers } from "react-icons/fa";
-import { MdVisibility } from "react-icons/md";
-
+import { FaChartLine, FaBullseye, FaCoins } from "react-icons/fa";
 import FeatureBenefits from "@/components/common/FeatureBenefits";
 import Image from "next/image";
 import Link from "next/link";
-interface ICommunityValidation {}
+interface IQuestionnaires {}
+
 const benefits = [
   {
-    key: "community",
+    key: "collect",
     benefitText: (
       <p>
-        Build credibility and trust by leveraging{" "}
-        <span className="text-[#3da9fc] font-bold  tracking-wide">
-          community
-        </span>{" "}
-        validation.
+        Reach your specific target audience and{" "}
+        <span className="text-[#3da9fc] font-bold  tracking-wide">collect</span>{" "}
+        targeted feedback.
       </p>
     ),
-    benefitIcon: <FaUsers className="text-[#3da9fc] text-[2.5rem]" />,
+    benefitIcon: <FaBullseye className="text-[#3da9fc] text-[2.5rem]" />,
   },
   {
-    key: "feedback",
+    key: "insights",
     benefitText: (
       <p>
-        Receive authentic user{" "}
+        Obtain valuable market research{" "}
         <span className="text-[#3da9fc] font-bold  tracking-wide">
-          feedback
+          insights
         </span>{" "}
-        and insights to refine your product or service.
+        for your startup or business.
       </p>
     ),
-    benefitIcon: <FaComments className="text-[#3da9fc] text-[2.5rem]" />,
+    benefitIcon: <FaChartLine className="text-[#3da9fc] text-[2.5rem]" />,
   },
   {
-    key: "visibility",
+    key: "fee",
     benefitText: (
       <p>
-        Increase brand{" "}
+        Pay a{" "}
         <span className="text-[#3da9fc] font-bold  tracking-wide">
-          visibility
+          pre-defined
         </span>{" "}
-        and awareness among a targeted audience.
+        fee based on expected completions to access the questionnaire
+        respondents.
       </p>
     ),
-    benefitIcon: <MdVisibility className="text-[#3da9fc] text-[2.5rem]" />,
+    benefitIcon: <FaCoins className="text-[#3da9fc] text-[2.5rem]" />,
   },
 ];
 
-const CommunityValidation = ({}) => {
+const Questionnaires = ({}) => {
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[100vh] lg:min-h-[70vh] gap-12">
@@ -55,14 +53,15 @@ const CommunityValidation = ({}) => {
         <div className="flex flex-col justify-center">
           <div>
             <h4 className=" text-xl md:text-2xl text-ff inline-block border-b-2 border-[#3da9fc] mb-4">
-              Community Validation
+              Questionnaires
             </h4>
           </div>
           <p className="mb-[3rem]  lg:mt-2 md:text-lg text-justify">
-            Tap into the power of community validation. Showcase your startup to
-            our vibrant community, gaining invaluable feedback and validation.
-            Benefit from the collective insights and expertise of like-minded
-            individuals to refine and elevate your ideas, products, or services.
+            Gain valuable insights through targeted questionnaires. Tailor your
+            surveys to a pre-defined target group and gather data that fuels
+            informed decision-making. Access our pool of pre-registered users,
+            incentivized to complete your questionnaires, and unlock valuable
+            market research insights for your startup or business.
           </p>
           <div>
             <div className="my-5">
@@ -86,7 +85,7 @@ const CommunityValidation = ({}) => {
               </div>
               <div className="mt-[3rem] md:mt-[5rem]">
                 <div className="flex justify-center items-center h-full">
-                  <Link href={"/services/validation"} className=" ">
+                  <Link href={"/services/questionnaires"} className=" ">
                     <button className="  rounded-lg bg-[#3da9fc] px-8 py-3 md:px-12 md:py-4 text-base font-medium tracking-wide  shadow-md shadow-[#3da9fc] transition duration-300 hover:bg-[#3da9fc] hover:shadow-lg hover:shadow-[#3da9fc] focus:bg-[#3da9fc] focus:shadow-md focus:shadow-[#3da9fc] focus-visible:outline-none hover:scale-110 active:scale-95 text-[#FBFBFB]    ">
                       <span>Get Started</span>
                     </button>
@@ -102,7 +101,7 @@ const CommunityValidation = ({}) => {
             <div className="relative h-[300px] lg:h-full w-full">
               <Image
                 alt="community validation"
-                src="/images/communityvalidation.jpg"
+                src="/images/questionnaires.jpg"
                 fill={true}
                 className="object-contain rounded-3xl"
               />
@@ -114,4 +113,4 @@ const CommunityValidation = ({}) => {
   );
 };
 
-export default CommunityValidation;
+export default Questionnaires;

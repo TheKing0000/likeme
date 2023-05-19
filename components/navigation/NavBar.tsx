@@ -153,7 +153,7 @@ const NavBar = () => {
                   </div>
 
                   <div className="flex flex-row justify-evenly  items-center w-full mb-2">
-                    <Link href="/signup">
+                    <Link href="/signup" onClick={handleNavbarClose}>
                       <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#16161a] dark:bg-[#FBFBFB] px-4   tracking-wide  transition duration-300 dark:hover:bg-[#FBFBFB]/70 hover:bg-[#16161a]/80 focus:bg-[#FBFBFB] focus-visible:outline-none  font-bold">
                         <span className="order-2 text-[#FBFBFB] dark:text-[#16161a]">
                           Get started
@@ -166,7 +166,7 @@ const NavBar = () => {
                         </span>
                       </button>
                     </Link>
-                    <Link href="/login">
+                    <Link href="/login" onClick={handleNavbarClose}>
                       <button className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FBFBFB] dark:bg-[#16161a] px-4   tracking-wide  transition duration-300 hover:bg-[#16161a]  dark:hover:bg-[#FBFBFB] font-bold   group">
                         <span className="order-2  text-[#16161a] dark:text-[#FBFBFB] group-hover:text-[#FBFBFB] dark:group-hover:text-[#16161a]">
                           Login

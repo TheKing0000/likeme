@@ -4,6 +4,8 @@ import LogoList from "@/components/animations/LogoList";
 import Testimonialscontainer from "@/components/testimonials/Testimonialscontainer";
 import Image from "next/image";
 import CommunityValidation from "@/components/pages/index/CommunityValidation";
+import JobSearch from "@/components/pages/index/JobSearch";
+import Questionnaires from "@/components/pages/index/Questionnaires";
 
 export default function Home() {
   return (
@@ -73,10 +75,13 @@ export default function Home() {
             </h3>
           </div>
 
-          <div className="">
+          <div className="container mx-auto px-2">
             {/* Community validation */}
-
             <CommunityValidation />
+            <div className="sectiondivider"></div>
+            <JobSearch />
+            <div className="sectiondivider"></div>
+            <Questionnaires />
           </div>
         </div>
       </section>

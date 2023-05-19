@@ -6,7 +6,7 @@ interface IFeatureBenefits {
 const FeatureBenefits = ({ benefitIcon, benefitText }: IFeatureBenefits) => {
   return (
     <div>
-      <div className="flex justify-start items-center text-ff text-base md:text-lg">
+      <div className="flex justify-start items-center text-ff text-base md:text-lg text-justify">
         <span className="inline-block pr-3">{benefitIcon}</span> {benefitText}
       </div>
     </div>
