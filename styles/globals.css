@@ -33,8 +33,17 @@
   .text-ff {
     @apply text-[#16161a] dark:text-[#FBFBFB];
   }
+  .r-text-ff {
+    @apply dark:text-[#16161a] text-[#FBFBFB];
+  }
   .bg-ff {
     @apply bg-[#fffffe] dark:bg-[#16161a];
+  }
+  .r-bg-ff {
+    @apply bg-[#16161a] dark:bg-[#fffffe];
+  }
+  .border-ff {
+    @apply dark:border-[#fffffe] border-[#16161a];
   }
   .sectiondivider {
     @apply my-[4rem] md:my-[7rem];
