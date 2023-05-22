@@ -15,7 +15,7 @@ export default function Home() {
         <div>
           <div className="min-h-[100vh] flex justify-start items-center flex-col mt-[1rem] md:mt-[3rem] px-1 w-full">
             <div className=" bg-[#16161a] dark:bg-[#16161a] shadow-lg shadow-[#3da9fc] dark:shadow-[#3da9fc] w-[300px] rounded mb-[1rem] md:mb-0">
-              <p className="text-center font-bold text-[#FBFBFB] dark:text-[#3da9fc]  ">
+              <p className="text-center font-bold text-[#FBFBFB]   ">
                 <span className="text-sm">
                   Unleash Your Startup&apos;s Potential
                 </span>
@@ -69,8 +69,8 @@ export default function Home() {
       {/* FEATURES */}
       <section>
         <div className=" px-5 md:px-10 ">
-          <div className="text-center ">
-            <h3 className="text-lg md:text-2xl text-ff mb-[8rem] md:mb-[10rem] shadow-lg  shadow-[#3da9fc] px-4 pb-2 inline-block md:hover:shadow-xl md:hover:shadow-[#3da9fc] transition-all duration-300">
+          <div className="container mx-auto">
+            <h3 className="text-center text-lg md:text-2xl text-ff mb-[8rem] md:mb-[10rem] shadow-lg  shadow-[#3da9fc]  pb-3  md:hover:shadow-xl md:hover:shadow-[#3da9fc] transition-all duration-300">
               Uncover the Hidden Gems of Our Platform
             </h3>
           </div>
