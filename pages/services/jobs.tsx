@@ -1,8 +1,17 @@
+import FeatureHero from "@/components/pages/features/hero/FeatureHero";
 import PricingCard from "@/components/pages/features/pricing/PricingCard";
 
 export default function Jobs() {
   return (
-    <div className="min-h-screen ">
+    <div>
+      <div>
+        <FeatureHero
+          name="Job Search"
+          desc="Welcome to our dynamic Job Search feature, designed to connect startups with talented individuals who are passionate about joining your team. Post job openings, attract ambitious individuals with an entrepreneurial spirit, and build a motivated team dedicated to your startup's success. Access a diverse talent pool, find skilled team members willing to contribute their expertise for equity, and accelerate your startup's growth."
+          imageUrl="/images/communityvalidation.jpg"
+        />
+      </div>
+
       <div className="min-h-[20vh]"></div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-12 lg:gap-6 lg:container lg:mx-auto px-4 md:px-10">
         <PricingCard

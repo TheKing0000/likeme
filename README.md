@@ -21,26 +21,3 @@ Finally, the questionnaires. Market research is essential for any startup, but i
 At LikeMe, we believe that these three features are essential for startups to succeed. By providing startups with the tools and resources they need to validate their ideas, build their teams and conduct market research, we help level the playing field and give startups a better chance of success.
 
 We believe our platform has the potential to make a real difference in the startup world and we'd love you to be part of our journey.
-
-<div
-            className={
-              mobileNavbarVisible
-                ? "z-[100] overflow-auto fixed top-0 left-0  w-[85%] sm:w-[90%]  h-screen bg-[#fffffe] dark:bg-[#0f0e17]    duration-300"
-                : "fixed left-[-100%] top-0 "
-            }
-          >
-            <div className="p-3">
-              <div className="flex justify-between items-center">
-                <AiOutlineClose
-                  onClick={() => setMobileNavbarVisible(false)}
-                  className="text-[#3da9fc] dark:text-[#3da9fc] cursor-pointer"
-                  size={25}
-                />
-
-                <SetTheme />
-              </div>
-              <div>
-                <h1 className=" ">Hali</h1>{" "}
-              </div>
-            </div>
-          </div>
