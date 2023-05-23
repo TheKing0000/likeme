@@ -47,7 +47,7 @@ const NavBar = () => {
   return (
     <header>
       <nav>
-        <div className="relative h-14  w-full mb-5">
+        <div className="relative h-14  w-full ">
           <div
             className={
               showShadow
