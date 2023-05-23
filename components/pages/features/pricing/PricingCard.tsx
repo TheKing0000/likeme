@@ -23,7 +23,7 @@ export default function PricingCard({
         className={`${
           premium
             ? " shadow-xl hover:shadow-2xl shadow-[#3da9fc] dark:shadow-[#3da9fc] hover:shadow-[#3da9fc] dark:hover:shadow-[#3da9fc]"
-            : "shadow hover:shadow-xl shadow-[#16161a] dark:shadow-[#fffffe] hover:shadow-[#3da9fc] dark:hover:shadow-[#3da9fc]"
+            : "shadow hover:shadow-xl shadow-[#94a1b2] dark:shadow-[#94a1b2] hover:shadow-[#3da9fc] dark:hover:shadow-[#3da9fc]"
         } min-h-[24rem] md:min-h-[30rem] rounded   transition-all duration-500`}
       >
         <div className="flex flex-col h-full p-3 md:p-5 space-y-4">
@@ -43,9 +43,12 @@ export default function PricingCard({
           <div className="flex-grow space-y-3 md:space-y-6 my-4">
             {features.map((feature) => {
               return (
-                <p className="flex flex-row space-x-2" key={feature}>
-                  <span className="flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-full r-bg-ff">
-                    <TiTick className="text-[1.5rem] r-text-ff" />
+                <p
+                  className="flex flex-row items-center space-x-2"
+                  key={feature}
+                >
+                  <span className="flex h-[1.2rem] w-[1.2rem] items-center justify-center rounded-full r-bg-ff">
+                    <TiTick className="text-[1.2rem] r-text-ff" />
                   </span>
                   <span className="">{feature}</span>
                 </p>
@@ -57,7 +60,7 @@ export default function PricingCard({
               premium
                 ? "dark:bg-[#fffffe] bg-[#16161a] dark:text-[#16161a] text-[#fffffe]"
                 : "bg-ff"
-            } border-ff border-[1px]  h-12  px-6 text-sm font-medium tracking-wide text-ff  rounded shadow-sm whitespace-nowrap bg-ff  hover:shadow-lg  dark:shadow-[#fffffe] shadow-[#16161a] `}
+            } border-ff border-[1px]  h-12  px-6 text-sm font-medium tracking-wide text-ff  rounded shadow-sm whitespace-nowrap bg-ff  hover:shadow-md  dark:shadow-[#fffffe] shadow-[#16161a] `}
           >
             <span>Select Plan</span>
           </button>
