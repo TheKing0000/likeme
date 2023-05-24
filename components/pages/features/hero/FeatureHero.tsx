@@ -29,6 +29,7 @@ export default function FeatureHero({ name, desc, imageUrl }: IFeatureHero) {
       </div>
       <div className="relative h-[300px] md:h-[400px] lg:h-[600px] bg-gradient-to-b from-[#16161a] dark:from-[#FBFBFB]/20 ">
         <Image
+          priority
           alt="community validation"
           src={imageUrl}
           fill={true}
