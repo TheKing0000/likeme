@@ -17,7 +17,7 @@ export default function FeatureHero({ name, desc, imageUrl }: IFeatureHero) {
         <div className="absolute w-full h-[90%] top-0 left-0  z-[4]  ">
           <div className="flex flex-col justify-evenly  items-start  h-full container mx-auto  ">
             <div className=" rounded-xl px-10 py-6 text-[#FBFBFB] ">
-              <h1 className="text-lg md:text-2xl uppercase mb-8 tracking-wider inline-block border-b-2 border-[#3da9fc] ">
+              <h1 className="text-3xl md:text-4xl lg:text-6xl uppercase mb-8 tracking-wider inline-block  ">
                 {name}
               </h1>
               <h2 className="text-lg tracking-wider leading-relaxed text-justify ">
@@ -27,7 +27,8 @@ export default function FeatureHero({ name, desc, imageUrl }: IFeatureHero) {
           </div>
         </div>
       </div>
-      <div className="relative h-[300px] md:h-[400px] lg:h-[600px] bg-gradient-to-b from-[#16161a] dark:from-[#FBFBFB]/20 ">
+      {/* bg-gradient-to-b from-[#16161a] dark:from-[#FBFBFB]/20 */}
+      <div className="relative h-[300px] md:h-[400px] lg:h-[600px] bg-[url('/gifs/questionnaires.gif')] bg-fixed  ">
         <Image
           priority
           alt="community validation"
@@ -35,6 +36,7 @@ export default function FeatureHero({ name, desc, imageUrl }: IFeatureHero) {
           fill={true}
           className="object-contain object-top -mt-10  z-[2] px-2 aspect-video"
         />
+        <div className="absolute top-0 left-0 w-full h-full z-[1]  bg-gradient-to-b from-[#16161a]/80  "></div>
       </div>
     </div>
   );
